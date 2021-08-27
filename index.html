@@ -74,41 +74,41 @@ input[type=submit]:hover {
 <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
 
 <div class="container">
-  <form action="/action_page.php">
+<iframe name='hidden-iframe' style='display: none'></iframe>
+<form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/macros/s/AKfycbxIRhWpcU_yNILV0x4qoGnPV5h3wYVa0Y42mqVyEtDij6xj5EHxaS6NyiHiDq4qCyEuGA/exec'>
     <div class="row">
       <div class="col-25">
-        <label for="fname">First Name</label>
+        <label>SATS No</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="number" name="SATS" required>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Last Name</label>
+        <label>Student Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" name="Name" required>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="country">Country</label>
+        <label>Date of Birth</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+        <input type="date" name="DOB" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Gender</label>
+      </div>
+      <div class="col-75">
+        <select name="Sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
         </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       </div>
     </div>
     <div class="row">
@@ -116,21 +116,5 @@ input[type=submit]:hover {
     </div>
   </form>
 </div>
-
-<iframe name='hidden-iframe' style='display: none'></iframe>
-<form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/macros/s/AKfycbxIRhWpcU_yNILV0x4qoGnPV5h3wYVa0Y42mqVyEtDij6xj5EHxaS6NyiHiDq4qCyEuGA/exec'>
-  <div>SATS No.:
-  <input type='number' name='SATS' minlength='9' required></div>
-  <div>Name:
-  <input type='text' name='Name' required></div>
-  <div>Class:
-  <input type='number' name='Class' required></div>
-  <div>DOB:
-  <input type='date' name='DOB'></div><br>
-  <input type='submit' value='Submit'>
-  <input type='reset'>
-</form>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVvsDt_FPFkWVVqCbNpiclgvPRK04klidEeyHS23vl2kfsYxdOCROCcZLcLGNfTF3pp17xzDuT1TEI/pubhtml?gid=1589930225&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
 </body>
 </html>
